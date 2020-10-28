@@ -1,0 +1,14 @@
+
+[1mFrom:[0m /home/cassandrawhitty/code/labs/mod1/hayk-assessment-the-bachelor/lib/bachelor.rb:59 Object#get_average_age_for_season:
+
+    [1;34m56[0m: [32mdef[0m [1;34mget_average_age_for_season[0m(data, season)
+    [1;34m57[0m:   data.each [32mdo[0m |season_num, people|
+    [1;34m58[0m:     [32mif[0m season_num == season
+ => [1;34m59[0m:       binding.pry
+    [1;34m60[0m:     people.reduce([1;34m0[0m) [32mdo[0m |age_sum, current_person_age|
+    [1;34m61[0m:       age_sum += current_person_age[[31m[1;31m"[0m[31mage[1;31m"[0m[31m[0m]
+    [1;34m62[0m:     [32mend[0m 
+    [1;34m63[0m:     [32mend[0m
+    [1;34m64[0m:   [32mend[0m
+    [1;34m65[0m: [32mend[0m
+
