@@ -20,13 +20,6 @@ def get_first_name_of_season_winner(data, season)
     end
   end
 end
-  #   # if people["status"] == "Winner"
-  #   #   winner = people["name"]
-  #   # end
-  #   first_and_last = people.split(" ")
-  # end
-  # return first_and_last[0]
-
 
 def get_contestant_name(data, occupation)
   data.each do |season_num, people|
