@@ -54,7 +54,7 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  people_ages = data[season].collect do |person| 
+  people_ages = data[season].map do |person| 
     person["age"].to_i
   end  
   ages_added = people_ages.reduce do |sum, current_age|
