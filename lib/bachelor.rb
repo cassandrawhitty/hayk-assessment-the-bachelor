@@ -11,15 +11,22 @@ require 'pry'
 def get_first_name_of_season_winner(data, season)
   data.each do |season_num, people|
     if season_num == season
-      people.each do |person_info|
-        if person_info["status"] = "Winner"
-          first_and_last = person_info["name"].split(" ")
-          return first_and_last[0]
+      people.find do |person_info|
+        if person_info["status"] == "Winner"
+          winner = person_info["name"].split(" ")
         end
+        return winner[0]
       end
-    end 
+    end
   end
 end
+  #   # if people["status"] == "Winner"
+  #   #   winner = people["name"]
+  #   # end
+  #   first_and_last = people.split(" ")
+  # end
+  # return first_and_last[0]
+
 
 def get_contestant_name(data, occupation)
   data.each do |season_num, people|
@@ -73,7 +80,7 @@ end
 #   binding.pry
 #   age_sum += current_person_age
 
-#SOLUTION THAT WORKS
+#SOLUTIONS THAT WORK
 # def get_average_age_for_season(data, season)
 #   sum = 0
 #   data.each do |season_num, people|
@@ -90,5 +97,16 @@ end
 #     end
 #     # binding.pry
 #   end
+# end
+
+# data.each do |season_num, people|
+#   if season_num == season
+#     people.each do |person_info|
+#       if person_info["status"] = "Winner"
+#         first_and_last = person_info["name"].split(" ")
+#         return first_and_last[0]
+#       end
+#     end
+#   end 
 # end
 
